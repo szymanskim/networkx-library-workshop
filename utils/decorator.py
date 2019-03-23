@@ -23,8 +23,8 @@ def profile(method):
 
 def quit_function(fn_name, s):
     logging.info('[{}] Execution took too long (Timeout: {} s)'.format(fn_name.upper(), s))
-    sys.stderr.flush() # Python 3 stderr is likely buffered.
-    thread.interrupt_main() # raises KeyboardInterrupt
+    sys.stderr.flush()
+    thread.interrupt_main()
 
 def exit_after(s):
     def outer(fn):

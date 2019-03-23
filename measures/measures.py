@@ -1,5 +1,4 @@
 import networkx as nx
-import timeout_decorator
 
 from utils import profile, exit_after
 from benchmark import TIMEOUT
