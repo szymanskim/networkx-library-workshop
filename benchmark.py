@@ -6,11 +6,13 @@ import networkx as nx
 from io_helper import load_adjlist
 from measures import *
 
-TIMEOUT = 30
+TIMEOUT = 7200
 
 AVAILABLE_FILES = ['astroph', 'chicago', 'livemocha', 'youtube', 'all']
 
-logging.basicConfig(format='%(asctime)s - %(message)s', level=logging.DEBUG)
+LOG_FILENAME = '{}.log'.format(datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+logging.basicConfig(filename=LOG_FILENAME, format='%(asctime)s - %(message)s', level=logging.DEBUG)
+logging.getLogger().addHandler(logging.StreamHandler())
 
 def main(filename):
     MEASURE_FUNCTIONS = [
