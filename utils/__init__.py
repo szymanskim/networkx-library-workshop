@@ -1,1 +1,1 @@
-from .decorator import profile
+from .decorator import profile, exit_after
