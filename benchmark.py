@@ -20,7 +20,7 @@ def main(filename):
         average_degree, number_of_connected_components, network_density, clustering_coefficient, pagerank, average_shortest_path_length, diameter, closeness, betweenness
     ]
     if filename == 'all':
-        filenames = AVAILABLE_FILES
+        filenames = AVAILABLE_FILES[:-1]
     else:
         filenames = [filename]
 
